@@ -1,0 +1,216 @@
+/* Contenedor principal */
+.usuarios-container {
+  background-color: #f8fafc; /* gris muy claro */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título */
+.usuarios-title {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Header (buscador + botón nuevo) */
+.usuarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.usuarios-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.usuarios-btn.add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.usuarios-btn.add:hover {
+  background-color: #2563eb;
+}
+
+/* Botones generales */
+.usuarios-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.usuarios-btn.submit {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.usuarios-btn.submit:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.usuarios-btn.cancel {
+  background-color: #ef4444;
+  color: white;
+}
+
+.usuarios-btn.cancel:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Lista de usuarios */
+.usuarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Card de cada usuario */
+.usuario-card {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.usuario-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Nombre del usuario */
+.usuario-nombre {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Acciones */
+.usuario-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.usuario-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 6px;
+  border-radius: 40%;
+  transition: all 0.2s;
+}
+
+/* Editar */
+.usuario-icon.edit {
+  color: #4caf50;
+}
+
+.usuario-icon.edit:hover {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Reset contraseña */
+.usuario-icon.pass {
+  color: #ff9800;
+}
+
+.usuario-icon.pass:hover {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Eliminar */
+.usuario-icon.delete {
+  color: #f44336;
+}
+
+.usuario-icon.delete:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.paginacion button {
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.paginacion button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.paginacion .numero-pagina {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #1976d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginacion .numero-pagina.activa {
+  background: #1976d2;
+  color: #fff;
+}
+
+.paginacion .numero-pagina:hover:not(.activa) {
+  background: #e3f2fd;
+}

@@ -1,0 +1,51 @@
+.texto-ia-container {
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.texto-ia-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.texto-ia-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #333;
+}
+
+.texto-ia-content strong {
+  color: #2e86c1;
+}
+
+.texto-ia-content p {
+  margin-bottom: 15px;
+}
+
+.texto-ia-content::first-letter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+/* Resaltar porcentajes */
+.texto-ia-content {
+  white-space: pre-line; /* Respeta saltos de línea */
+}
+
+.texto-ia-content p span[data-percent] {
+  background: #dff9fb;
+  color: #0984e3;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 5px;
+}

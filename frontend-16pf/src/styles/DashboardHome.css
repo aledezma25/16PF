@@ -1,0 +1,103 @@
+/* Contenedor principal */
+.dashboard-container {
+  background-color: #f8fafc; /* gris muy claro */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-home h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.dashboard-home p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Layout de las tarjetas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 6px;
+  margin-top: 20px;
+}
+
+/* Tarjeta base */
+.stat-card {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Título de la tarjeta */
+.stat-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Número principal */
+.stat-card p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.refresh-fab {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.refresh-fab:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.refresh-fab:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

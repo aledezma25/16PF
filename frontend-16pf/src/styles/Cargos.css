@@ -1,0 +1,353 @@
+/* Contenedor principal */
+.requisitos-container {
+  background-color: #f8fafc; /* gris muy claro */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título */
+.requisitos-title {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Formulario */
+.requisitos-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 🔍 Buscador + botón */
+.requisitos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.requisitos-input {
+  flex: 1 1 250px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.requisitos-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Botones del formulario */
+.requisitos-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.requisitos-btn.submit {
+  background-color: #3b82f6; /* azul */
+  color: white;
+}
+.requisitos-btn-1.submit {
+  background-color: #6200b3; /* azul */
+  color: white;
+}
+.requisitos-btn-1.submit:hover:not(:disabled) {
+  background-color: #31005a;
+  transform: translateY(-1px);
+}
+
+.requisitos-btn.submit:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.requisitos-btn.cancel {
+  background-color: #ef4444; /* rojo */
+  color: white;
+}
+
+.requisitos-btn.cancel:hover {
+  background-color: #dc2626 !important;
+  transform: translateY(-1px);
+}
+
+/* Lista de requisitos */
+.requisitos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Card de cada requisito */
+.requisito-card {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.requisito-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Nombre del requisito */
+.requisito-nombre {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.requisito-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.requisito-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 6px;
+  border-radius: 40%;
+  transition: all 0.2s;
+}
+
+.requisito-icon.edit {
+  color: #ffd900;
+}
+
+.requisito-icon.edit:hover {
+  background-color: #e8f5e9;
+  color: #8e7900;
+}
+
+.requisito-icon.delete {
+  color: #f44336;
+}
+
+.requisito-icon.delete:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.paginacion button {
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.paginacion button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.paginacion .numero-pagina {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #1976d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginacion .numero-pagina.activa {
+  background: #1976d2;
+  color: #fff;
+}
+
+.paginacion .numero-pagina:hover:not(.activa) {
+  background: #e3f2fd;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Para el modal más grande */
+.modal.large .modal-content {
+  width: 70%; /* más ancho */
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.requisitos-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.requisitos-checklist label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+.requisitos-checklist input {
+  width: 16px;
+  height: 16px;
+}
+.requisitos-checklist input[type="checkbox"] {
+  accent-color: #3b82f6; /* azul moderno */
+}
+.requisitos-checklist input[type="checkbox"]:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end; /* o "center" si prefieres */
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.form-group button {
+  margin-top: 15px;
+}
+
+.form-group button:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.nuevo-requisito {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.requisitos-filtro-select {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
+  background: #f8f8f8;
+  color: #333;
+  font-size: 1rem;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: border 0.2s;
+  max-width: 180px;
+}
+
+.requisitos-filtro-select:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  background: #fff;
+}
+
+.requisitos-filtro-select option:checked {
+  background: #1976d2;
+  color: #fff;
+}
